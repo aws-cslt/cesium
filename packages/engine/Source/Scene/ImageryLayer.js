@@ -914,7 +914,7 @@ ImageryLayer.prototype._createTileImagerySkeletons = function (
   // it may not start at the northern or western edge of the terrain tile.
   // Calculate where it does start.
   if (
-    !this.isBaseLayer() &&
+    !this.isBaseLayer() && clippedImageryRectangle && 
     Math.abs(clippedImageryRectangle.west - terrainRectangle.west) >= veryCloseX
   ) {
     maxU = Math.min(
@@ -925,7 +925,7 @@ ImageryLayer.prototype._createTileImagerySkeletons = function (
   }
 
   if (
-    !this.isBaseLayer() &&
+    !this.isBaseLayer() && clippedImageryRectangle && 
     Math.abs(clippedImageryRectangle.north - terrainRectangle.north) >=
       veryCloseY
   ) {
